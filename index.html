@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>CRUD PHP VUE JS</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+
+	<div id="app">
+		<div class="container-fluid">
+			<div class="row bg-dark">
+				<div class="col-md-12">
+					<p class="text-center text-light display-4 pt-2" style="font-size: 25px;">CRUD menggunakan VUE JS, PHP dan MySQLi</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row mt-3">
+				<div class="col-md-6">
+					<h3 class="text-info">Register User</h3>
+				</div>
+				<div class="col-md-6">
+					<button class="btn btn-info float-right">
+						<i class="fas fa-user"></i>&nbsp;&nbsp; Tambah User
+					</button>
+				</div>
+			</div>
+
+			<hr class="bg-info">
+			<div class="alert alert-danger" v-if="pesanError">Pesan Error</div>
+			<div class="alert alert-success" v-if="pesanBerhasil">Pesan Berhasil</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-bordered table-striped">
+						<thead>
+							<tr class="text-center bg-info text-light">
+								<th>ID</th>
+								<th>Nama</th>
+								<th>Email</th>
+								<th>Phone</th>
+								<th>Aksi</th>
+							</tr>
+							<tr class="text-center">
+								<td>1</td>
+								<td>Ilham</td>
+								<td>Ilham@gmail.com</td>
+								<td>085624218342</td>
+								<td>
+									<a href="#" class="text-success mr-5"><i class="fas fa-edit"></i></a>
+									<a href="#" class="text-danger"><i class="fas fa-trash-alt"></i></a>
+								</td>
+							</tr>
+							<tr class="text-center">
+								<td>2</td>
+								<td>Galih</td>
+								<td>Galih@gmail.com</td>
+								<td>087788665544</td>
+								<td>
+									<a href="#" class="text-success mr-5"><i class="fas fa-edit"></i></a>
+									<a href="#" class="text-danger"><i class="fas fa-trash-alt"></i></a>
+								</td>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
